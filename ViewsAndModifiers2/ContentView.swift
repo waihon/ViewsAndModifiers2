@@ -9,6 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var spells: some View {
+        Group {
+            Text("Draco dormiens")
+                .foregroundColor(.red)
+            Text("nunquam titllandus")
+                .foregroundColor(.blue)
+        }
+    }
+
+    var body: some View {
+        spells
+    }
+}
+
+struct MultipleViewsUsingVStackContentView: View {
+    var spells: some View {
         VStack {
             Text("Draco dormiens")
                 .foregroundColor(.red)
