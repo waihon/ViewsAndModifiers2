@@ -12,6 +12,7 @@ struct ContentView: View {
         VStack {
             Text("Gryffindor")
             Text("Hufflepuff")
+                .font(.largeTitle)
             Text("Ravenclaw")
             Text("Slytherin")
         }
