@@ -7,7 +7,21 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    @ViewBuilder var spells: some View {
+        Text("Draco dormiens")
+            .foregroundColor(.red)
+        Text("nunquam titllandus")
+            .foregroundColor(.blue)
+    }
+
+    var body: some View {
+        spells
+    }
+}
+
+struct MultipleViewsUsingGroupContentView: View {
     var spells: some View {
         Group {
             Text("Draco dormiens")
