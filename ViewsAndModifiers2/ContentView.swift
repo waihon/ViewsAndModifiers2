@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    var body: some View {
+        VStack {
+            Text("Gryffindor")
+            Text("Hufflepuff")
+            Text("Ravenclaw")
+            Text("Slytherin")
+        }
+        .font(.title)
+    }
+}
+
+struct ConditionalModifiersIfContentView: View {
     @State private var useRedText = false
 
     var body: some View {
