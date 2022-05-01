@@ -12,6 +12,16 @@ struct ContentView: View {
         Button("Hello, world!") {
             print(type(of: self.body))
         }
+        .frame(width: 200, height: 200)
+        .background(.red)
+    }
+}
+
+struct ButtonBackgroundFrameContentView: View {
+    var body: some View {
+        Button("Hello, world!") {
+            print(type(of: self.body))
+        }
         .background(.red)
         .frame(width: 200, height: 200)
     }
