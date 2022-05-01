@@ -8,6 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    let motto1 = Text("Draco dormiens")
+    let motto2 = Text("nunquam titllandus")
+
+    var body: some View {
+        VStack {
+            motto1
+                .foregroundColor(.red)
+            motto2
+                .foregroundColor(.blue)
+        }
+    }
+}
+
+struct RegularModifiersBlurContentView: View {
     var body: some View {
         VStack {
             Text("Gryffindor")
