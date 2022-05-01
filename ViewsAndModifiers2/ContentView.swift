@@ -8,6 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    var spells: some View {
+        VStack {
+            Text("Draco dormiens")
+                .foregroundColor(.red)
+            Text("nunquam titllandus")
+                .foregroundColor(.blue)
+        }
+    }
+
+    var body: some View {
+        spells
+    }
+}
+
+struct ViewsAsPropertiesContentView: View {
     let motto1 = Text("Draco dormiens")
     let motto2 = Text("nunquam titllandus")
 
