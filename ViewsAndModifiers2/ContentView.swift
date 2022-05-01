@@ -7,6 +7,24 @@
 
 import SwiftUI
 
+struct Title: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .padding()
+            .foregroundColor(.white)
+            .background(.blue)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        Text("Hello, world!")
+            .modifier(Title())
+    }
+}
+
 struct CapsuleText: View {
     var text: String
 
@@ -18,7 +36,7 @@ struct CapsuleText: View {
             .clipShape(Capsule())
     }
 }
-struct ContentView: View {
+struct ViewCompositionContentView: View {
 
     var body: some View {
         VStack(spacing: 10) {
