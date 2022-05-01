@@ -12,6 +12,20 @@ struct ContentView: View {
         VStack {
             Text("Gryffindor")
             Text("Hufflepuff")
+                .blur(radius: 0)
+            Text("Ravenclaw")
+                .blur(radius: 2)
+            Text("Slytherin")
+        }
+        .blur(radius: 2)
+    }
+}
+
+struct EnvironmentModifiersFontContentView: View {
+    var body: some View {
+        VStack {
+            Text("Gryffindor")
+            Text("Hufflepuff")
                 .font(.largeTitle)
             Text("Ravenclaw")
             Text("Slytherin")
