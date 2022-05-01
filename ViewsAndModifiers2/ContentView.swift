@@ -7,6 +7,32 @@
 
 import SwiftUI
 
+struct GridStack<Content: View>: View {
+    let rows: Int
+    let columns: Int
+    let content: (Int, Int) -> Content
+
+    var body: some View {
+        VStack {
+            ForEach(0..<rows, id: \.self) { row in
+                HStack(spacing: 10) {
+                    ForEach(0..<columns, id: \.self) { column in
+                        content(row, column)
+                    }
+                }
+            }
+        }
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        GridStack(rows: 4, columns: 4) { row, col in
+            Text("R\(row) C\(col)")
+        }
+    }
+}
+
 struct Watermark: ViewModifier {
     var text: String
 
@@ -28,7 +54,7 @@ extension View {
     }
 }
 
-struct ContentView: View {
+struct WatermarkContentView: View {
     var body: some View {
         Color.blue
             .frame(width: 300, height: 300)
