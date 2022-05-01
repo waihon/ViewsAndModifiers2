@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var useRedText = false
+
+    var body: some View {
+        Button("Hello World") {
+            // Flip the Boolean between true and false
+            useRedText.toggle()
+        }
+        .foregroundColor(useRedText ? .red : .blue)
+    }
+}
+
+struct TuperViewContentView: View {
     var body: some View {
         // Swift silently applies a special attribute to the body property
         // called @ViewBuilder. This has the effect of silently wrapping
