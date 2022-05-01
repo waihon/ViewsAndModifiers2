@@ -9,6 +9,26 @@ import SwiftUI
 
 
 struct ContentView: View {
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("First")
+                .font(.largeTitle)
+                .padding()
+                .foregroundColor(.white)
+                .background(.blue)
+                .clipShape(Capsule())
+
+            Text("Second")
+                .font(.largeTitle)
+                .padding()
+                .foregroundColor(.white)
+                .background(.blue)
+                .clipShape(Capsule())
+        }
+    }
+}
+
+struct MultipleViewsUsingViewBuilderContentView: View {
     @ViewBuilder var spells: some View {
         Text("Draco dormiens")
             .foregroundColor(.red)
