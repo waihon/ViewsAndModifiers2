@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    var body: some View {
+        // Swift silently applies a special attribute to the body property
+        // called @ViewBuilder. This has the effect of silently wrapping
+        // multiple views in one of TupleView containers.
+        Text("Hello, world!")
+        Text("Hello, world!")
+        Text("Hello, world!")
+        Text("Hello, world!")
+    }
+}
+
+struct TextContentView: View {
     var body: Text {
         Text("Hello, world!")
     }
