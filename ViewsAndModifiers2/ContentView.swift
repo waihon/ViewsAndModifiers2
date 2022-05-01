@@ -18,7 +18,20 @@ struct Title: ViewModifier {
     }
 }
 
+extension View {
+    func titleStyle() -> some View {
+        modifier(Title())
+    }
+}
+
 struct ContentView: View {
+    var body: some View {
+        Text("Hello, world!")
+            .titleStyle()
+    }
+}
+
+struct TitleModifierContentView: View {
     var body: some View {
         Text("Hello, world!")
             .modifier(Title())
